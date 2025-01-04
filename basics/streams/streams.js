@@ -9,3 +9,7 @@ readStream.on("data", (chunk) => {
   writeStream.write("\nNEW CHUNK\n");
   writeStream.write(chunk);
 });
+
+// Piping streams - copying data from one stream to another
+const pipeWriteStream = fs.createWriteStream("./docs/doc3.txt");
+readStream.pipe(pipeWriteStream);
