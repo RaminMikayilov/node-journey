@@ -48,3 +48,44 @@ const difference = math.subtract(5, 3);
 console.log(`Sum: ${sum}`);
 console.log(`Difference: ${difference}`);
 ```
+
+### [`files.js`](./basics/file-system/files.js)
+
+This file demonstrates the usage of Node.js file system module.
+
+- `fs.readFile()`: A function to read files asynchronously.
+- `fs.writeFile()`: A function to write files asynchronously.
+- `fs.unlink()`: A function to delete files asynchronously.
+
+Example usage:
+
+```javascript
+const fs = require("fs");
+
+// Read file
+fs.readFile("example.txt", (err, data) => {
+  if (err) {
+    console.error(err);
+  }
+
+  console.log(data);
+});
+
+// Write file
+fs.writeFile("example.txt", "Hello, World!", (err) => {
+  if (err) {
+    console.error(err);
+  }
+
+  console.log("File written successfully!");
+});
+
+// Delete file
+fs.unlink("example.txt", (err) => {
+  if (err) {
+    console.error(err);
+  }
+
+  console.log("File deleted successfully!");
+});
+```
