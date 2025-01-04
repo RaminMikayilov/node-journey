@@ -89,3 +89,23 @@ fs.unlink("example.txt", (err) => {
   console.log("File deleted successfully!");
 });
 ```
+
+### [`streams.js`](./basics/streams/streams.js)
+
+This file demonstrates the usage of Node.js streams. Streams are objects that let you read data from a source or write data to a destination in continuous fashion.
+
+- `fs.createReadStream()`: A function to create a readable stream.
+- `fs.createWriteStream()`: A function to create a writable stream.
+
+Example usage:
+
+```javascript
+const fs = require("fs");
+
+const read = fs.createReadStream("example.txt", "utf8");
+const write = fs.createWriteStream("output.txt");
+
+read.on("data", (chunk) => {
+  write.write(chunk);
+});
+```
