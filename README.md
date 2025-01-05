@@ -109,3 +109,25 @@ read.on("data", (chunk) => {
   write.write(chunk);
 });
 ```
+
+### [`server.js`](./http/server.js)
+
+This file demonstrates the usage of Node.js HTTP module to create a simple server.
+
+- `http.createServer()`: A function to create an HTTP server.
+- `server.listen()`: A function to start the server.
+
+Example usage:
+
+```javascript
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("Hello, World!");
+});
+
+server.listen(3000, () => {
+  console.log("Server is running on http://localhost:3000");
+});
+```
