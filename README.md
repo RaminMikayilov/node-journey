@@ -131,3 +131,25 @@ server.listen(3000, () => {
   console.log("Server is running on http://localhost:3000");
 });
 ```
+
+### [Express basic](./express/app.js)
+
+This file demonstrates the usage of Express.js to create a simple server. Express.js is a web application framework for Node.js.
+
+- `express()`: A function to create an Express application.
+- `app.get()`: A function to handle GET requests.
+- `app.listen()`: A function to start the server.
+
+Example usage:
+
+```javascript
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  // do not need to set the content type, end the response and set the status code
+  res.send("Hello, World!");
+});
+
+app.listen(3001);
+```
