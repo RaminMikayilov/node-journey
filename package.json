@@ -1,0 +1,14 @@
+{
+  "name": "node-journey",
+  "version": "1.0.0",
+  "description": "This file demonstrates the usage of Node.js global objects and variables.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
