@@ -153,3 +153,24 @@ app.get("/", (req, res) => {
 
 app.listen(3001);
 ```
+
+### [View Engine](./view-engine/app.js)
+
+This file demonstrates the usage of Express.js view engine to render dynamic content. A view engine allows you to render HTML pages dynamically. In this example, we are using EJS (Embedded JavaScript) as the view engine.
+
+- `app.set()`: A function to set the view engine.
+
+Example usage:
+
+```javascript
+const express = require("express");
+const app = express();
+
+app.set("view engine", "ejs");
+
+app.get("/", (req, res) => {
+  res.render("index", { title: "Node Journey", message: "Hello, World!" });
+});
+
+app.listen(3002);
+```
