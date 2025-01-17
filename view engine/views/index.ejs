@@ -6,10 +6,10 @@
     <title>Home page</title>
   </head>
   <body>
+    <%- include('partials/nav') %>
+
     <h1>Home Page</h1>
     <p>Welcome to the home page</p>
-
-    <a href="/about">About</a>
 
     <% if (blogs.length > 0) { %> <% blogs.forEach(blog => { %>
     <div>
