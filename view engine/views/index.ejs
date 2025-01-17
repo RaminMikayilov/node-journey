@@ -10,5 +10,14 @@
     <p>Welcome to the home page</p>
 
     <a href="/about">About</a>
+
+    <% if (blogs.length > 0) { %> <% blogs.forEach(blog => { %>
+    <div>
+      <h2><%= blog.title %></h2>
+      <p><%= blog.snippet %></p>
+    </div>
+    <% }) %> <% } else { %>
+    <p>No blogs available</p>
+    <% } %>
   </body>
 </html>
