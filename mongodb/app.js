@@ -1,7 +1,8 @@
+require("dotenv").config({ path: "../.env" });
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const dbURI = "";
+const dbURI = process.env.ATLAS_URI;
 const Blog = require("./models/blog");
 
 mongoose
