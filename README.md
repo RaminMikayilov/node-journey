@@ -174,3 +174,33 @@ app.get("/", (req, res) => {
 
 app.listen(3002);
 ```
+
+### [Middleware]()
+
+This file demonstrates the usage of Express.js middleware. Middleware functions are functions that have access to the request object (`req`), the response object (`res`), and the next middleware function in the application's request-response cycle. Middleware functions can perform the following tasks:
+
+- Execute any code.
+- Make changes to the request and the response objects.
+- End the request-response cycle.
+- Call the next middleware function in the stack.
+
+Example usage:
+
+```javascript
+const express = require("express");
+const app = express();
+
+// Middleware function
+const logger = (req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+};
+
+app.use(logger);
+
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
+
+app.listen(5000);
+```
